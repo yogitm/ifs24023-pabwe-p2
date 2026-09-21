@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIsoISE - Solusi & Jasa Artificial Intelligence Enterprise</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/logo.png" type="image/png" />
+
+  <!-- Google Fonts: Outfit (Display), Source Sans 3 (Body), JetBrains Mono (Code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheet (Pure CSS) -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <script>
+    // Initialize Theme Before Render to prevent flash
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header">
+    <div class="container navbar">
+      <!-- Brand Logo & Title -->
+      <a href="#home" class="brand">
+        <img src="assets/img/logo.png" alt="AIsoISE Logo" class="brand-logo" />
+        <span class="brand-title">AIso<span>ISE</span></span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#layanan">Layanan AI</a>
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#kontak">Konsultasi</a>
+        <a href="blog.html">Blog AI</a>
+        <a href="cv.html">Curriculum Vitae</a>
+      </nav>
+
+      <!-- Action Buttons & Theme Switcher -->
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Ubah Mode Layar">
+          <span id="themeIcon">🌙</span>
+        </button>
+
+        <!-- Menu Switcher Latihan Praktikum -->
+        <div class="nav-latihan">
+          <button type="button" class="nav-latihan-toggle" id="latihanToggleBtn" onclick="toggleLatihanMenu(event)">
+            Praktikum 2 ▾
+          </button>
+          <div class="nav-latihan-menu" id="latihanMenu">
+            <a href="index.html" class="is-active">Studi Kasus 3.1 (CSS)</a>
+            <a href="blog.html">Studi Kasus 3.2 (Bootstrap 5)</a>
+            <a href="cv.html">Studi Kasus 3.3 (Tailwind 4)</a>
+            <a href="bootstrap5.html">Latihan 2.2 Bootstrap</a>
+            <a href="tailwind4.html">Latihan 2.3 Tailwind</a>
+          </div>
+        </div>
+
+        <a href="#kontak" class="btn btn-primary">Konsultasi AI</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <div class="eyebrow">⚡ NEXT-GEN ARTIFICIAL INTELLIGENCE BY AISOISE</div>
+          <h1>Transformasi Bisnis Enterprise dengan <span>Solusi AIsoISE</span></h1>
+          <p class="hero-description">
+            AIsoISE menghadirkan otomatisasi cerdas, Large Language Models (LLM), Computer Vision, dan analitik prediktif skala enterprise untuk mengakselerasi efisiensi bisnis Anda.
+          </p>
+          <div class="hero-buttons">
+            <a href="#kontak" class="btn btn-primary">Konsultasi Gratis &rarr;</a>
+            <a href="#layanan" class="btn btn-outline">Jelajahi Layanan</a>
+          </div>
+        </div>
+
+        <!-- Animated Floating Hero Visual -->
+        <div class="hero-visual">
+          <div class="floating-card">
+            <div class="card-header-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="code-line"><span class="keyword">const</span> aisoise = <span class="keyword">new</span> AIsoISEEngine({</div>
+            <div class="code-line indent"><span class="prop">service</span>: <span class="val">'Enterprise-LLM-v4'</span>,</div>
+            <div class="code-line indent"><span class="prop">accuracy</span>: <span class="val">'99.8%'</span>,</div>
+            <div class="code-line indent"><span class="prop">automation</span>: <span class="val">true</span>,</div>
+            <div class="code-line indent"><span class="prop">security</span>: <span class="val">'SOC2 & ISO27001'</span></div>
+            <div class="code-line">});</div>
+            <div class="code-line" style="margin-top: 16px;"><span class="keyword">await</span> aisoise.deployWorkflow();</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAYANAN AI SECTION -->
+    <section id="layanan" class="section section-alt">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="eyebrow">LAYANAN UNGGULAN AISOISE</div>
+          <h2>Solusi Artificial Intelligence yang Kami Sediakan</h2>
+          <p>Klik tombol <strong>"Pelajari Selengkapnya"</strong> pada setiap layanan untuk melihat rincian arsitektur, spesifikasi, dan fitur lengkapnya.</p>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Card 1: LLM & Chatbot -->
+          <article class="card featured">
+            <div class="card-icon">🤖</div>
+            <h3>Enterprise LLM & Chatbot Assistant</h3>
+            <p>Pengembangan asisten virtual cerdas berbasis RAG (Retrieval-Augmented Generation) terintegrasi dengan basis data internal perusahaan.</p>
+            <button type="button" class="card-link-btn" onclick="openModal('modal-llm')">
+              Pelajari Selengkapnya &rarr;
+            </button>
+          </article>
+
+          <!-- Card 2: Computer Vision -->
+          <article class="card">
+            <div class="card-icon">👁️</div>
+            <h3>Computer Vision & Quality Control</h3>
+            <p>Sistem inspeksi visual otomatis berbasis Deep Learning untuk mendeteksi anomali produk dan pengawasan keamanan real-time.</p>
+            <button type="button" class="card-link-btn" onclick="openModal('modal-cv')">
+              Pelajari Selengkapnya &rarr;
+            </button>
+          </article>
+
+          <!-- Card 3: Agentic Automation -->
+          <article class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Otomasi Bisnis & Agentic Workflow</h3>
+            <p>Implementasi AI Agent mandiri yang mampu mengeksekusi alur kerja kompleks dan pemrosesan dokumen secara otomatis.</p>
+            <button type="button" class="card-link-btn" onclick="openModal('modal-automation')">
+              Pelajari Selengkapnya &rarr;
+            </button>
+          </article>
+
+          <!-- Card 4: Predictive Analytics -->
+          <article class="card">
+            <div class="card-icon">📊</div>
+            <h3>Predictive Analytics & Data Science</h3>
+            <p>Model pemodelan prediktif untuk estimasi demand, analisis risiko finansial, dan optimasi rantai pasok perusahaan.</p>
+            <button type="button" class="card-link-btn" onclick="openModal('modal-analytics')">
+              Pelajari Selengkapnya &rarr;
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TENTANG KAMI & STATS SECTION -->
+    <section id="tentang" class="section">
+      <div class="container stats-container">
+        <div class="about-text">
+          <div class="eyebrow">MENGAPA AISOISE</div>
+          <h2>Mitra Terpercaya Transformasi Kecerdasan Buatan Enterprise</h2>
+          <p>
+            <strong>AIsoISE</strong> adalah konsultan dan penyedia layanan Artificial Intelligence terdepan. Didukung oleh peneliti AI dan insinyur berpengalaman, kami membantu transformasi digital perusahaan Anda dari konseptualisasi hingga deployment skala penuh.
+          </p>
+          <ul style="padding-left: 20px; color: var(--text-light); margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;">Privasi & Keamanan Data Tingkat Tinggi (On-Premise / Private Cloud Deployment).</li>
+            <li style="margin-bottom: 10px;">Integrasi Seamless ke Infrastruktur & API Perusahaan yang Sudah Ada.</li>
+            <li>Tim Expert Pendampingan 24/7 dan Pengawasan Performa Model Kontinu.</li>
+          </ul>
+          <a href="#kontak" class="btn btn-primary">Diskusi Proyek Anda</a>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Klien Enterprise</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">99.8%</div>
+            <div class="stat-label">Akurasi Model</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">10M+</div>
+            <div class="stat-label">Transaksi AI / Hari</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Dukungan Teknis</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM KONTAK & KONSULTASI -->
+    <section id="kontak" class="section section-alt">
+      <div class="container">
+        <div class="section-heading text-center">
+          <div class="eyebrow">HUBUNGI KAMI</div>
+          <h2>Mulai Konsultasi AI Bersama Tim AIsoISE</h2>
+          <p>Isi formulir di bawah ini untuk mengagendakan sesi demonstrasi produk dan konsultasi teknis gratis.</p>
+        </div>
+
+        <div class="form-wrapper">
+          <form class="practice-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Terima kasih! Tim AIsoISE akan segera menghubungi Anda.');">
+            <div class="form-group">
+              <label for="nama">Nama Lengkap *</label>
+              <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Alamat Email Perusahaan *</label>
+              <input type="email" id="email" name="email" placeholder="nama@perusahaan.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="layanan-pilihan">Solusi AIsoISE yang Diminati</label>
+              <select id="layanan-pilihan" name="layanan-pilihan">
+                <option value="llm">Enterprise LLM & Chatbot</option>
+                <option value="cv">Computer Vision & Inspeksi</option>
+                <option value="automation">Agentic Workflow & Automasi</option>
+                <option value="analytics">Predictive Analytics</option>
+                <option value="other">Konsultasi Kustom AIsoISE</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="pesan">Deskripsi Kebutuhan / Proyek *</label>
+              <textarea id="pesan" name="pesan" rows="4" placeholder="Jelaskan kebutuhan penerapan AI di perusahaan Anda..." required></textarea>
+            </div>
+
+            <label class="form-checkbox">
+              <input type="checkbox" required /> Saya menyetujui Kebijakan Privasi AIsoISE dan pengolahan data untuk komunikasi proyek.
+            </label>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Permintaan Konsultasi &rarr;</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SERVICE DETAIL MODALS (PELAJARI SELENGKAPNYA) -->
+  <!-- Modal 1: Enterprise LLM -->
+  <div class="modal-backdrop" id="modal-llm">
+    <div class="modal-content-box">
+      <button type="button" class="modal-close-btn" onclick="closeModal('modal-llm')">&times;</button>
+      <div class="modal-header-icon">🤖</div>
+      <h2>Enterprise LLM & Chatbot Assistant</h2>
+      <p>Layanan AIsoISE ini menghadirkan asisten kecerdasan buatan terdedikasi untuk perusahaan Anda dengan arsitektur RAG (Retrieval-Augmented Generation).</p>
+      
+      <h4 style="margin-top: 20px;">Fitur & Keunggulan Utama:</h4>
+      <ul class="modal-feature-list">
+        <li><strong>RAG Arsitektur:</strong> Menghubungkan basis data PDF, Notion, Confluence, & SQL internal tanpa kebocoran data.</li>
+        <li><strong>Fine-Tuning Kustom:</strong> Model disesuaikan dengan istilah bisnis dan terminologi spesifik perusahaan.</li>
+        <li><strong>Multilingual Support:</strong> Mendukung Bahasa Indonesia, Inggris, dan 30+ bahasa internasional.</li>
+        <li><strong>Keamanan Terjamin:</strong> Deployment On-Premise atau Private VPC Cloud dengan enkripsi AES-256.</li>
+      </ul>
+
+      <div style="display: flex; gap: 12px; margin-top: 24px;">
+        <a href="#kontak" class="btn btn-primary" onclick="closeModal('modal-llm')">Konsultasi Layanan Ini</a>
+        <button type="button" class="btn btn-outline" onclick="closeModal('modal-llm')">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Computer Vision -->
+  <div class="modal-backdrop" id="modal-cv">
+    <div class="modal-content-box">
+      <button type="button" class="modal-close-btn" onclick="closeModal('modal-cv')">&times;</button>
+      <div class="modal-header-icon">👁️</div>
+      <h2>Computer Vision & Quality Control</h2>
+      <p>Sistem pengenalan gambar dan video berbasis Deep Learning untuk otomasi inspeksi visual produk dan pengawasan area kerja.</p>
+
+      <h4 style="margin-top: 20px;">Fitur & Keunggulan Utama:</h4>
+      <ul class="modal-feature-list">
+        <li><strong>Deteksi Defek Real-Time:</strong> Kecepatan pemrosesan hingga 60 FPS untuk lini manufaktur cepat.</li>
+        <li><strong>Pengenalan Alat Pelindung Diri (APD):</strong> Memantau penggunaan helm, rompi, dan masker di area berisiko.</li>
+        <li><strong>Integrasi CCTV Kamera:</strong> Kompatibel dengan semua jenis kamera IP dan CCTV existing.</li>
+        <li><strong>Laporan Analitik Visual:</strong> Dashboard grafik deteksi anomali harian dan bulanan.</li>
+      </ul>
+
+      <div style="display: flex; gap: 12px; margin-top: 24px;">
+        <a href="#kontak" class="btn btn-primary" onclick="closeModal('modal-cv')">Konsultasi Layanan Ini</a>
+        <button type="button" class="btn btn-outline" onclick="closeModal('modal-cv')">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Agentic Automation -->
+  <div class="modal-backdrop" id="modal-automation">
+    <div class="modal-content-box">
+      <button type="button" class="modal-close-btn" onclick="closeModal('modal-automation')">&times;</button>
+      <div class="modal-header-icon">⚡</div>
+      <h2>Otomasi Bisnis & Agentic Workflow</h2>
+      <p>Mengubah proses bisnis manual yang repetitif menjadi alur kerja mandiri menggunakan Autonomous AI Agents.</p>
+
+      <h4 style="margin-top: 20px;">Fitur & Keunggulan Utama:</h4>
+      <ul class="modal-feature-list">
+        <li><strong>Eksekusi Mandiri:</strong> AI Agent dapat membaca email, mengambil lampiran, dan mengisi ERP secara otomatis.</li>
+        <li><strong>Human-in-the-Loop:</strong> Fitur persetujuan manusia untuk keputusan berisiko atau transaksi besar.</li>
+        <li><strong>Pemrosesan Dokumen Terstruktur:</strong> Ekstraksi data otomatis dari invoice, nota, dan kontrak kerja.</li>
+        <li><strong>Penghematan Waktu:</strong> Mengurangi beban kerja administrasi berulang hingga 85%.</li>
+      </ul>
+
+      <div style="display: flex; gap: 12px; margin-top: 24px;">
+        <a href="#kontak" class="btn btn-primary" onclick="closeModal('modal-automation')">Konsultasi Layanan Ini</a>
+        <button type="button" class="btn btn-outline" onclick="closeModal('modal-automation')">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Predictive Analytics -->
+  <div class="modal-backdrop" id="modal-analytics">
+    <div class="modal-content-box">
+      <button type="button" class="modal-close-btn" onclick="closeModal('modal-analytics')">&times;</button>
+      <div class="modal-header-icon">📊</div>
+      <h2>Predictive Analytics & Data Science</h2>
+      <p>Memodelkan data historis perusahaan menjadi estimasi tren masa depan yang akurat untuk mendukung keputusan manajerial.</p>
+
+      <h4 style="margin-top: 20px;">Fitur & Keunggulan Utama:</h4>
+      <ul class="modal-feature-list">
+        <li><strong>Forecasting Demand & Penjualan:</strong> Prediksi kebutuhan inventaris barang secara presisi.</li>
+        <li><strong>Analisis Risiko Finansial:</strong> Pemodelan deteksi kecurangan (fraud detection) dan skor kredit.</li>
+        <li><strong>Customer Churn Prediction:</strong> Identifikasi pengguna berisiko berhenti menggunakan layanan.</li>
+        <li><strong>Visualisasi Dashboard Interaktif:</strong> Terhubung langsung dengan PowerBI, Tableau, atau kustom web UI.</li>
+      </ul>
+
+      <div style="display: flex; gap: 12px; margin-top: 24px;">
+        <a href="#kontak" class="btn btn-primary" onclick="closeModal('modal-analytics')">Konsultasi Layanan Ini</a>
+        <button type="button" class="btn btn-outline" onclick="closeModal('modal-analytics')">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-title">AIso<span>ISE</span></div>
+          <p>Pelopor penyedia layanan Artificial Intelligence terpercaya di Indonesia. Membantu perusahaan melompat lebih jauh dengan inovasi kecerdasan buatan terdepan.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigasi Halaman</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#layanan">Layanan AI</a></li>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="#kontak">Konsultasi</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Proyek PABWE</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Landing Page (CSS)</a></li>
+            <li><a href="blog.html">Daftar Blog (Bootstrap 5)</a></li>
+            <li><a href="blog-detail.html">Detail Blog (Bootstrap 5)</a></li>
+            <li><a href="cv.html">Curriculum Vitae (Tailwind 4)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontak & Kantor</h4>
+          <ul class="footer-links">
+            <li>📍 Medan & Balige, Sumatera Utara</li>
+            <li>📧 contact@aisoise.ai</li>
+            <li>📞 +62 812-3456-7890</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 AIsoISE Studio. Tugas PABWE Praktikum 2 - IT Del.</div>
+        <div>Dibuat oleh <strong>Yogi Tri M (yogitm)</strong>.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Back To Top Button -->
+  <a href="#home" class="back-to-top" title="Kembali ke atas">&uarr;</a>
+
+  <!-- SCRIPTS FOR THEME TOGGLE, MODALS & DROPDOWN -->
+  <script>
+    // 1. Theme Toggle Logic
+    function updateThemeUI(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      const icon = document.getElementById('themeIcon');
+      if (icon) {
+        icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+      }
+      if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+      } else {
+        document.body.classList.remove('dark-mode');
+      }
+    }
+
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', currentTheme);
+      updateThemeUI(currentTheme);
+    }
+
+    // Initialize Theme Icon on load
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      updateThemeUI(currentTheme);
+    });
+
+    // 2. Service Modal Dialogs
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Close modal on clicking backdrop
+    window.addEventListener('click', (e) => {
+      if (e.target.classList.contains('modal-backdrop')) {
+        e.target.classList.remove('show');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // 3. Dropdown Menu Toggle for Mobile/Click
+    function toggleLatihanMenu(e) {
+      e.stopPropagation();
+      const menu = document.getElementById('latihanMenu');
+      if (menu) {
+        menu.classList.toggle('show');
+      }
+    }
+
+    document.addEventListener('click', () => {
+      const menu = document.getElementById('latihanMenu');
+      if (menu) {
+        menu.classList.remove('show');
+      }
+    });
+  </script>
+
+</body>
+</html>
