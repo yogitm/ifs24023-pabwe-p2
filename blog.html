@@ -29,16 +29,78 @@
       font-weight: 700;
     }
     .text-primary-custom {
-      color: #2563eb !important;
-    }
-    [data-bs-theme="dark"] .text-primary-custom {
-      color: #60a5fa !important;
+      color: #1d4ed8 !important;
     }
     .bg-primary-custom {
-      background-color: #2563eb !important;
+      background-color: #1d4ed8 !important;
+      color: #ffffff !important;
+    }
+    [data-bs-theme="dark"] .text-primary-custom {
+      color: #93c5fd !important;
     }
     [data-bs-theme="dark"] .bg-primary-custom {
-      background-color: #3b82f6 !important;
+      background-color: #1e40af !important;
+      color: #ffffff !important;
+    }
+    /* Dark Mode WCAG AA Overrides for Bootstrap Components */
+    [data-bs-theme="dark"] .btn-outline-secondary {
+      color: #e2e8f0 !important;
+      border-color: #64748b !important;
+    }
+    [data-bs-theme="dark"] .btn-outline-secondary:hover {
+      background-color: #334155 !important;
+      color: #ffffff !important;
+    }
+    [data-bs-theme="dark"] .btn-outline-primary {
+      color: #93c5fd !important;
+      border-color: #3b82f6 !important;
+    }
+    [data-bs-theme="dark"] .btn-outline-primary:hover {
+      background-color: #2563eb !important;
+      color: #ffffff !important;
+    }
+    [data-bs-theme="dark"] .text-primary,
+    [data-bs-theme="dark"] .badge.text-primary {
+      color: #93c5fd !important;
+    }
+    [data-bs-theme="dark"] .text-danger,
+    [data-bs-theme="dark"] .badge.text-danger {
+      color: #fca5a5 !important;
+    }
+    [data-bs-theme="dark"] .text-success,
+    [data-bs-theme="dark"] .badge.text-success {
+      color: #86efac !important;
+    }
+    [data-bs-theme="dark"] .text-warning,
+    [data-bs-theme="dark"] .badge.text-warning {
+      color: #fde047 !important;
+    }
+    [data-bs-theme="dark"] .text-info,
+    [data-bs-theme="dark"] .badge.text-info {
+      color: #7dd3fc !important;
+    }
+    [data-bs-theme="dark"] .bg-primary-subtle {
+      background-color: rgba(30, 58, 138, 0.6) !important;
+      color: #bfdbfe !important;
+    }
+    [data-bs-theme="dark"] .bg-danger-subtle {
+      background-color: rgba(127, 29, 29, 0.6) !important;
+      color: #fecaca !important;
+    }
+    [data-bs-theme="dark"] .bg-success-subtle {
+      background-color: rgba(20, 83, 45, 0.6) !important;
+      color: #bbf7d0 !important;
+    }
+    [data-bs-theme="dark"] .bg-warning-subtle {
+      background-color: rgba(113, 63, 18, 0.6) !important;
+      color: #fef08a !important;
+    }
+    [data-bs-theme="dark"] .bg-info-subtle {
+      background-color: rgba(12, 74, 110, 0.6) !important;
+      color: #bae6fd !important;
+    }
+    [data-bs-theme="dark"] .text-body-secondary {
+      color: #cbd5e1 !important;
     }
     .card-blog {
       transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -117,13 +179,13 @@
 
         <div class="d-flex align-items-center gap-3">
           <!-- Theme Toggle Button -->
-          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Ubah Mode Layar">
+          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Ubah Mode Layar" aria-label="Ubah mode tema layar">
             <span id="themeIcon">🌙</span>
           </button>
 
           <!-- Dropdown Latihan Switcher -->
           <div class="dropdown">
-            <button class="btn btn-outline-secondary btn-sm dropdown-toggle rounded-pill px-3" type="button" id="dropdownLatihanBtn" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-outline-secondary btn-sm dropdown-toggle rounded-pill px-3" type="button" id="dropdownLatihanBtn" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Menu navigasi praktikum 2">
               Praktikum 2 ▾
             </button>
             <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="dropdownLatihanBtn">
@@ -142,35 +204,36 @@
     </div>
   </nav>
 
-  <!-- HERO BLOG SECTION -->
-  <section class="hero-blog mb-5">
-    <div class="container text-center">
-      <span class="badge bg-primary-custom px-3 py-2 rounded-pill mb-3 text-uppercase tracking-wider">
-        <i class="bi bi-cpu me-1"></i> Knowledge Base & Insights BY AISOISE
-      </span>
-      <h1 class="display-4 fw-bold mb-3">Wawasan & Tren Artificial Intelligence 2026</h1>
-      <p class="lead text-light opacity-75 max-w-2xl mx-auto" style="max-width: 700px;">
-        Temukan artikel mendalam tentang Generative AI, Large Language Models (LLM), Agentic Workflows, serta implementasi AI di skala industri enterprise.
-      </p>
-    </div>
-  </section>
-
   <!-- MAIN BLOG CONTENT -->
-  <main class="container pb-5">
-    
-    <!-- CATEGORY FILTER PILLS -->
-    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4 pb-3 border-bottom">
-      <div class="d-flex flex-wrap gap-2">
-        <button class="btn btn-primary-custom text-white btn-sm rounded-pill px-3"><i class="bi bi-grid-fill me-1"></i> Semua Topik</button>
-        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i class="bi bi-robot me-1"></i> Agentic AI</button>
-        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i class="bi bi-layers me-1"></i> RAG & LLM</button>
-        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i class="bi bi-shield-check me-1"></i> Etika AI</button>
-        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3"><i class="bi bi-gear-wide-connected me-1"></i> MLOps</button>
+  <main>
+    <!-- HERO BLOG SECTION -->
+    <section class="hero-blog mb-5">
+      <div class="container text-center">
+        <span class="badge bg-primary-custom px-3 py-2 rounded-pill mb-3 text-uppercase tracking-wider">
+          <i class="bi bi-cpu me-1"></i> Knowledge Base & Insights BY AISOISE
+        </span>
+        <h1 class="display-4 fw-bold mb-3">Wawasan & Tren Artificial Intelligence 2026</h1>
+        <p class="lead text-light opacity-75 max-w-2xl mx-auto" style="max-width: 700px;">
+          Temukan artikel mendalam tentang Generative AI, Large Language Models (LLM), Agentic Workflows, serta implementasi AI di skala industri enterprise.
+        </p>
       </div>
-      <div class="text-body-secondary small">
-        Menampilkan <strong>4 Artikel Terpopuler</strong>
+    </section>
+
+    <div class="container pb-5">
+      
+      <!-- CATEGORY FILTER PILLS -->
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4 pb-3 border-bottom">
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-primary-custom text-white btn-sm rounded-pill px-3" aria-label="Tampilkan artikel semua topik"><i class="bi bi-grid-fill me-1" aria-hidden="true"></i> Semua Topik</button>
+          <button class="btn btn-outline-secondary btn-sm rounded-pill px-3" aria-label="Filter kategori Agentic AI"><i class="bi bi-robot me-1" aria-hidden="true"></i> Agentic AI</button>
+          <button class="btn btn-outline-secondary btn-sm rounded-pill px-3" aria-label="Filter kategori RAG dan LLM"><i class="bi bi-layers me-1" aria-hidden="true"></i> RAG & LLM</button>
+          <button class="btn btn-outline-secondary btn-sm rounded-pill px-3" aria-label="Filter kategori Etika AI"><i class="bi bi-shield-check me-1" aria-hidden="true"></i> Etika AI</button>
+          <button class="btn btn-outline-secondary btn-sm rounded-pill px-3" aria-label="Filter kategori MLOps"><i class="bi bi-gear-wide-connected me-1" aria-hidden="true"></i> MLOps</button>
+        </div>
+        <div class="text-body-secondary small">
+          Menampilkan <strong>4 Artikel Terpopuler</strong>
+        </div>
       </div>
-    </div>
 
     <!-- FEATURED POST BANNER (WITH RELIABLE LOCAL COVER IMAGE) -->
     <div class="card card-blog mb-5 border shadow-sm bg-body overflow-hidden">
@@ -313,13 +376,13 @@
     <!-- PAGINATION & NEWSLETTER -->
     <div class="row align-items-center g-4">
       <div class="col-md-6">
-        <nav aria-label="Blog pagination">
+        <nav aria-label="Navigasi halaman artikel">
           <ul class="pagination mb-0">
-            <li class="page-item disabled"><a class="page-link rounded-start-pill" href="#">Sebelumnya</a></li>
-            <li class="page-item active"><a class="page-link bg-primary-custom border-0" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link rounded-end-pill" href="#">Berikutnya</a></li>
+            <li class="page-item disabled"><a class="page-link rounded-start-pill" href="#" aria-label="Halaman sebelumnya" tabindex="-1" aria-disabled="true">Sebelumnya</a></li>
+            <li class="page-item active" aria-current="page"><a class="page-link bg-primary-custom border-0" href="#" aria-label="Halaman 1, saat ini aktif">1</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Halaman 2">2</a></li>
+            <li class="page-item"><a class="page-link" href="#" aria-label="Halaman 3">3</a></li>
+            <li class="page-item"><a class="page-link rounded-end-pill" href="#" aria-label="Halaman berikutnya">Berikutnya</a></li>
           </ul>
         </nav>
       </div>
@@ -327,10 +390,10 @@
       <div class="col-md-6">
         <div class="bg-primary-subtle p-4 rounded-4 d-flex align-items-center justify-content-between gap-3">
           <div>
-            <h5 class="fw-bold mb-1"><i class="bi bi-envelope-open me-2 text-primary-custom"></i> Berlangganan AIsoISE Insight</h5>
+            <h5 class="fw-bold mb-1"><i class="bi bi-envelope-open me-2 text-primary-custom" aria-hidden="true"></i> Berlangganan AIsoISE Insight</h5>
             <p class="small text-body-secondary mb-0">Dapatkan buletin AI mingguan langsung ke email Anda.</p>
           </div>
-          <button class="btn btn-primary-custom text-white btn-sm rounded-pill px-3" onclick="alert('Terima kasih telah berlangganan newsletter AIsoISE!')">Daftar</button>
+          <button class="btn btn-primary-custom text-white btn-sm rounded-pill px-3" aria-label="Daftar berlangganan buletin mingguan AIsoISE" onclick="alert('Terima kasih telah berlangganan newsletter AIsoISE!')">Daftar</button>
         </div>
       </div>
     </div>
@@ -342,28 +405,28 @@
     <div class="container">
       <div class="row g-4 pb-4 border-bottom border-secondary border-opacity-25">
         <div class="col-lg-5">
-          <h5 class="fw-bold text-white mb-3">AIso<span class="text-primary-custom">ISE Studio</span></h5>
+          <h2 class="h5 fw-bold text-white mb-3">AIso<span class="text-primary-custom">ISE Studio</span></h2>
           <p class="text-secondary max-w-sm" style="max-width: 380px;">
             Pusat edukasi dan penyedia solusi Artificial Intelligence terkemuka. Terdepan dalam riset, inovasi, dan otomasi enterprise.
           </p>
         </div>
 
         <div class="col-6 col-lg-3">
-          <h6 class="fw-bold text-white mb-3">Proyek PABWE</h6>
+          <h3 class="h6 fw-bold text-white mb-3">Proyek PABWE</h3>
           <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
-            <li><a href="index.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1"></i> Landing Page (CSS)</a></li>
-            <li><a href="blog.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1"></i> Daftar Blog (Bootstrap 5)</a></li>
-            <li><a href="blog-detail.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1"></i> Detail Blog (Bootstrap 5)</a></li>
-            <li><a href="cv.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1"></i> Curriculum Vitae (Tailwind 4)</a></li>
+            <li><a href="index.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1" aria-hidden="true"></i> Landing Page (CSS)</a></li>
+            <li><a href="blog.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1" aria-hidden="true"></i> Daftar Blog (Bootstrap 5)</a></li>
+            <li><a href="blog-detail.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1" aria-hidden="true"></i> Detail Blog (Bootstrap 5)</a></li>
+            <li><a href="cv.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1" aria-hidden="true"></i> Curriculum Vitae (Tailwind 4)</a></li>
           </ul>
         </div>
 
         <div class="col-6 col-lg-4">
-          <h6 class="fw-bold text-white mb-3">Kontak Penulis & Institusi</h6>
+          <h3 class="h6 fw-bold text-white mb-3">Kontak Penulis & Institusi</h3>
           <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
-            <li><i class="bi bi-geo-alt me-2 text-primary-custom"></i> Institut Teknologi Del, Balige</li>
-            <li><i class="bi bi-person-vcard me-2 text-primary-custom"></i> Yogi Tri M (yogitm)</li>
-            <li><i class="bi bi-code-slash me-2 text-primary-custom"></i> Praktikum 2 - PABWE 2026</li>
+            <li><i class="bi bi-geo-alt me-2 text-primary-custom" aria-hidden="true"></i> Institut Teknologi Del, Balige</li>
+            <li><i class="bi bi-person-vcard me-2 text-primary-custom" aria-hidden="true"></i> Yogi Tri M (ifs24023)</li>
+            <li><i class="bi bi-code-slash me-2 text-primary-custom" aria-hidden="true"></i> Praktikum 2 - PABWE 2026</li>
           </ul>
         </div>
       </div>

@@ -48,13 +48,13 @@
       <!-- Action Buttons & Theme Switcher -->
       <div class="nav-actions">
         <!-- Theme Toggle Button -->
-        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Ubah Mode Layar">
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Ubah Mode Layar" aria-label="Ubah mode tema layar">
           <span id="themeIcon">🌙</span>
         </button>
 
         <!-- Menu Switcher Latihan Praktikum -->
         <div class="nav-latihan">
-          <button type="button" class="nav-latihan-toggle" id="latihanToggleBtn" onclick="toggleLatihanMenu(event)">
+          <button type="button" class="nav-latihan-toggle" id="latihanToggleBtn" onclick="toggleLatihanMenu(event)" aria-label="Menu navigasi praktikum 2" aria-haspopup="true" aria-expanded="false">
             Praktikum 2 ▾
           </button>
           <div class="nav-latihan-menu" id="latihanMenu">
@@ -244,100 +244,102 @@
         </div>
       </div>
     </section>
+  
+    <!-- SERVICE DETAIL MODALS (CONTAINED IN MAIN LANDMARK) -->
+    <section aria-label="Modal Rincian Layanan AI">
+      <!-- Modal 1: Enterprise LLM -->
+      <div class="modal-backdrop" id="modal-llm" role="dialog" aria-modal="true" aria-labelledby="modal-llm-title">
+        <div class="modal-content-box">
+          <button type="button" class="modal-close-btn" onclick="closeModal('modal-llm')" aria-label="Tutup jendela detail layanan">&times;</button>
+          <div class="modal-header-icon">🤖</div>
+          <h2 id="modal-llm-title">Enterprise LLM & Chatbot Assistant</h2>
+          <p>Layanan AIsoISE ini menghadirkan asisten kecerdasan buatan terdedikasi untuk perusahaan Anda dengan arsitektur RAG (Retrieval-Augmented Generation).</p>
+          
+          <h3 style="margin-top: 20px; font-size: 1.15rem;">Fitur & Keunggulan Utama:</h3>
+          <ul class="modal-feature-list">
+            <li><strong>RAG Arsitektur:</strong> Menghubungkan basis data PDF, Notion, Confluence, & SQL internal tanpa kebocoran data.</li>
+            <li><strong>Fine-Tuning Kustom:</strong> Model disesuaikan dengan istilah bisnis dan terminologi spesifik perusahaan.</li>
+            <li><strong>Multilingual Support:</strong> Mendukung Bahasa Indonesia, Inggris, dan 30+ bahasa internasional.</li>
+            <li><strong>Keamanan Terjamin:</strong> Deployment On-Premise atau Private VPC Cloud dengan enkripsi AES-256.</li>
+          </ul>
+
+          <div style="display: flex; gap: 12px; margin-top: 24px;">
+            <a href="#kontak" class="btn btn-primary" onclick="closeModal('modal-llm')">Konsultasi Layanan Ini</a>
+            <button type="button" class="btn btn-outline" onclick="closeModal('modal-llm')">Tutup</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 2: Computer Vision -->
+      <div class="modal-backdrop" id="modal-cv" role="dialog" aria-modal="true" aria-labelledby="modal-cv-title">
+        <div class="modal-content-box">
+          <button type="button" class="modal-close-btn" onclick="closeModal('modal-cv')" aria-label="Tutup jendela detail layanan">&times;</button>
+          <div class="modal-header-icon">👁️</div>
+          <h2 id="modal-cv-title">Computer Vision & Quality Control</h2>
+          <p>Sistem pengenalan gambar dan video berbasis Deep Learning untuk otomasi inspeksi visual produk dan pengawasan area kerja.</p>
+
+          <h3 style="margin-top: 20px; font-size: 1.15rem;">Fitur & Keunggulan Utama:</h3>
+          <ul class="modal-feature-list">
+            <li><strong>Deteksi Defek Real-Time:</strong> Kecepatan pemrosesan hingga 60 FPS untuk lini manufaktur cepat.</li>
+            <li><strong>Pengenalan Alat Pelindung Diri (APD):</strong> Memantau penggunaan helm, rompi, dan masker di area berisiko.</li>
+            <li><strong>Integrasi CCTV Kamera:</strong> Kompatibel dengan semua jenis kamera IP dan CCTV existing.</li>
+            <li><strong>Laporan Analitik Visual:</strong> Dashboard grafik deteksi anomali harian dan bulanan.</li>
+          </ul>
+
+          <div style="display: flex; gap: 12px; margin-top: 24px;">
+            <a href="#kontak" class="btn btn-primary" onclick="closeModal('modal-cv')">Konsultasi Layanan Ini</a>
+            <button type="button" class="btn btn-outline" onclick="closeModal('modal-cv')">Tutup</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 3: Agentic Automation -->
+      <div class="modal-backdrop" id="modal-automation" role="dialog" aria-modal="true" aria-labelledby="modal-automation-title">
+        <div class="modal-content-box">
+          <button type="button" class="modal-close-btn" onclick="closeModal('modal-automation')" aria-label="Tutup jendela detail layanan">&times;</button>
+          <div class="modal-header-icon">⚡</div>
+          <h2 id="modal-automation-title">Otomasi Bisnis & Agentic Workflow</h2>
+          <p>Mengubah proses bisnis manual yang repetitif menjadi alur kerja mandiri menggunakan Autonomous AI Agents.</p>
+
+          <h3 style="margin-top: 20px; font-size: 1.15rem;">Fitur & Keunggulan Utama:</h3>
+          <ul class="modal-feature-list">
+            <li><strong>Eksekusi Mandiri:</strong> AI Agent dapat membaca email, mengambil lampiran, dan mengisi ERP secara otomatis.</li>
+            <li><strong>Human-in-the-Loop:</strong> Fitur persetujuan manusia untuk keputusan berisiko atau transaksi besar.</li>
+            <li><strong>Pemrosesan Dokumen Terstruktur:</strong> Ekstraksi data otomatis dari invoice, nota, dan kontrak kerja.</li>
+            <li><strong>Penghematan Waktu:</strong> Mengurangi beban kerja administrasi berulang hingga 85%.</li>
+          </ul>
+
+          <div style="display: flex; gap: 12px; margin-top: 24px;">
+            <a href="#kontak" class="btn btn-primary" onclick="closeModal('modal-automation')">Konsultasi Layanan Ini</a>
+            <button type="button" class="btn btn-outline" onclick="closeModal('modal-automation')">Tutup</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 4: Predictive Analytics -->
+      <div class="modal-backdrop" id="modal-analytics" role="dialog" aria-modal="true" aria-labelledby="modal-analytics-title">
+        <div class="modal-content-box">
+          <button type="button" class="modal-close-btn" onclick="closeModal('modal-analytics')" aria-label="Tutup jendela detail layanan">&times;</button>
+          <div class="modal-header-icon">📊</div>
+          <h2 id="modal-analytics-title">Predictive Analytics & Data Science</h2>
+          <p>Memodelkan data historis perusahaan menjadi estimasi tren masa depan yang akurat untuk mendukung keputusan manajerial.</p>
+
+          <h3 style="margin-top: 20px; font-size: 1.15rem;">Fitur & Keunggulan Utama:</h3>
+          <ul class="modal-feature-list">
+            <li><strong>Forecasting Demand & Penjualan:</strong> Prediksi kebutuhan inventaris barang secara presisi.</li>
+            <li><strong>Analisis Risiko Finansial:</strong> Pemodelan deteksi kecurangan (fraud detection) dan skor kredit.</li>
+            <li><strong>Customer Churn Prediction:</strong> Identifikasi pengguna berisiko berhenti menggunakan layanan.</li>
+            <li><strong>Visualisasi Dashboard Interaktif:</strong> Terhubung langsung dengan PowerBI, Tableau, atau kustom web UI.</li>
+          </ul>
+
+          <div style="display: flex; gap: 12px; margin-top: 24px;">
+            <a href="#kontak" class="btn btn-primary" onclick="closeModal('modal-analytics')">Konsultasi Layanan Ini</a>
+            <button type="button" class="btn btn-outline" onclick="closeModal('modal-analytics')">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-
-  <!-- SERVICE DETAIL MODALS (PELAJARI SELENGKAPNYA) -->
-  <!-- Modal 1: Enterprise LLM -->
-  <div class="modal-backdrop" id="modal-llm">
-    <div class="modal-content-box">
-      <button type="button" class="modal-close-btn" onclick="closeModal('modal-llm')">&times;</button>
-      <div class="modal-header-icon">🤖</div>
-      <h2>Enterprise LLM & Chatbot Assistant</h2>
-      <p>Layanan AIsoISE ini menghadirkan asisten kecerdasan buatan terdedikasi untuk perusahaan Anda dengan arsitektur RAG (Retrieval-Augmented Generation).</p>
-      
-      <h4 style="margin-top: 20px;">Fitur & Keunggulan Utama:</h4>
-      <ul class="modal-feature-list">
-        <li><strong>RAG Arsitektur:</strong> Menghubungkan basis data PDF, Notion, Confluence, & SQL internal tanpa kebocoran data.</li>
-        <li><strong>Fine-Tuning Kustom:</strong> Model disesuaikan dengan istilah bisnis dan terminologi spesifik perusahaan.</li>
-        <li><strong>Multilingual Support:</strong> Mendukung Bahasa Indonesia, Inggris, dan 30+ bahasa internasional.</li>
-        <li><strong>Keamanan Terjamin:</strong> Deployment On-Premise atau Private VPC Cloud dengan enkripsi AES-256.</li>
-      </ul>
-
-      <div style="display: flex; gap: 12px; margin-top: 24px;">
-        <a href="#kontak" class="btn btn-primary" onclick="closeModal('modal-llm')">Konsultasi Layanan Ini</a>
-        <button type="button" class="btn btn-outline" onclick="closeModal('modal-llm')">Tutup</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 2: Computer Vision -->
-  <div class="modal-backdrop" id="modal-cv">
-    <div class="modal-content-box">
-      <button type="button" class="modal-close-btn" onclick="closeModal('modal-cv')">&times;</button>
-      <div class="modal-header-icon">👁️</div>
-      <h2>Computer Vision & Quality Control</h2>
-      <p>Sistem pengenalan gambar dan video berbasis Deep Learning untuk otomasi inspeksi visual produk dan pengawasan area kerja.</p>
-
-      <h4 style="margin-top: 20px;">Fitur & Keunggulan Utama:</h4>
-      <ul class="modal-feature-list">
-        <li><strong>Deteksi Defek Real-Time:</strong> Kecepatan pemrosesan hingga 60 FPS untuk lini manufaktur cepat.</li>
-        <li><strong>Pengenalan Alat Pelindung Diri (APD):</strong> Memantau penggunaan helm, rompi, dan masker di area berisiko.</li>
-        <li><strong>Integrasi CCTV Kamera:</strong> Kompatibel dengan semua jenis kamera IP dan CCTV existing.</li>
-        <li><strong>Laporan Analitik Visual:</strong> Dashboard grafik deteksi anomali harian dan bulanan.</li>
-      </ul>
-
-      <div style="display: flex; gap: 12px; margin-top: 24px;">
-        <a href="#kontak" class="btn btn-primary" onclick="closeModal('modal-cv')">Konsultasi Layanan Ini</a>
-        <button type="button" class="btn btn-outline" onclick="closeModal('modal-cv')">Tutup</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 3: Agentic Automation -->
-  <div class="modal-backdrop" id="modal-automation">
-    <div class="modal-content-box">
-      <button type="button" class="modal-close-btn" onclick="closeModal('modal-automation')">&times;</button>
-      <div class="modal-header-icon">⚡</div>
-      <h2>Otomasi Bisnis & Agentic Workflow</h2>
-      <p>Mengubah proses bisnis manual yang repetitif menjadi alur kerja mandiri menggunakan Autonomous AI Agents.</p>
-
-      <h4 style="margin-top: 20px;">Fitur & Keunggulan Utama:</h4>
-      <ul class="modal-feature-list">
-        <li><strong>Eksekusi Mandiri:</strong> AI Agent dapat membaca email, mengambil lampiran, dan mengisi ERP secara otomatis.</li>
-        <li><strong>Human-in-the-Loop:</strong> Fitur persetujuan manusia untuk keputusan berisiko atau transaksi besar.</li>
-        <li><strong>Pemrosesan Dokumen Terstruktur:</strong> Ekstraksi data otomatis dari invoice, nota, dan kontrak kerja.</li>
-        <li><strong>Penghematan Waktu:</strong> Mengurangi beban kerja administrasi berulang hingga 85%.</li>
-      </ul>
-
-      <div style="display: flex; gap: 12px; margin-top: 24px;">
-        <a href="#kontak" class="btn btn-primary" onclick="closeModal('modal-automation')">Konsultasi Layanan Ini</a>
-        <button type="button" class="btn btn-outline" onclick="closeModal('modal-automation')">Tutup</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 4: Predictive Analytics -->
-  <div class="modal-backdrop" id="modal-analytics">
-    <div class="modal-content-box">
-      <button type="button" class="modal-close-btn" onclick="closeModal('modal-analytics')">&times;</button>
-      <div class="modal-header-icon">📊</div>
-      <h2>Predictive Analytics & Data Science</h2>
-      <p>Memodelkan data historis perusahaan menjadi estimasi tren masa depan yang akurat untuk mendukung keputusan manajerial.</p>
-
-      <h4 style="margin-top: 20px;">Fitur & Keunggulan Utama:</h4>
-      <ul class="modal-feature-list">
-        <li><strong>Forecasting Demand & Penjualan:</strong> Prediksi kebutuhan inventaris barang secara presisi.</li>
-        <li><strong>Analisis Risiko Finansial:</strong> Pemodelan deteksi kecurangan (fraud detection) dan skor kredit.</li>
-        <li><strong>Customer Churn Prediction:</strong> Identifikasi pengguna berisiko berhenti menggunakan layanan.</li>
-        <li><strong>Visualisasi Dashboard Interaktif:</strong> Terhubung langsung dengan PowerBI, Tableau, atau kustom web UI.</li>
-      </ul>
-
-      <div style="display: flex; gap: 12px; margin-top: 24px;">
-        <a href="#kontak" class="btn btn-primary" onclick="closeModal('modal-analytics')">Konsultasi Layanan Ini</a>
-        <button type="button" class="btn btn-outline" onclick="closeModal('modal-analytics')">Tutup</button>
-      </div>
-    </div>
-  </div>
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -349,7 +351,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Navigasi Halaman</h4>
+          <h3>Navigasi Halaman</h3>
           <ul class="footer-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#layanan">Layanan AI</a></li>
@@ -359,7 +361,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Proyek PABWE</h4>
+          <h3>Proyek PABWE</h3>
           <ul class="footer-links">
             <li><a href="index.html">Landing Page (CSS)</a></li>
             <li><a href="blog.html">Daftar Blog (Bootstrap 5)</a></li>
@@ -369,7 +371,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Kontak & Kantor</h4>
+          <h3>Kontak & Kantor</h3>
           <ul class="footer-links">
             <li>📍 Medan & Balige, Sumatera Utara</li>
             <li>📧 contact@aisoise.ai</li>
@@ -380,13 +382,13 @@
 
       <div class="footer-bottom">
         <div>&copy; 2026 AIsoISE Studio. Tugas PABWE Praktikum 2 - IT Del.</div>
-        <div>Dibuat oleh <strong>Yogi Tri M (yogitm)</strong>.</div>
+        <div>Dibuat oleh <strong>Yogi Tri M (ifs24023)</strong>.</div>
       </div>
     </div>
-  </footer>
 
-  <!-- Sticky Back To Top Button -->
-  <a href="#home" class="back-to-top" title="Kembali ke atas">&uarr;</a>
+    <!-- Sticky Back To Top Button Contained in Landmark -->
+    <a href="#home" class="back-to-top" title="Kembali ke atas" aria-label="Kembali ke atas">&uarr;</a>
+  </footer>
 
   <!-- SCRIPTS FOR THEME TOGGLE, MODALS & DROPDOWN -->
   <script>

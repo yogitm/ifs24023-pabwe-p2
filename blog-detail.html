@@ -30,16 +30,53 @@
       font-weight: 700;
     }
     .text-primary-custom {
-      color: #2563eb !important;
+      color: #1d4ed8 !important;
     }
     [data-bs-theme="dark"] .text-primary-custom {
-      color: #60a5fa !important;
+      color: #93c5fd !important;
     }
     .bg-primary-custom {
-      background-color: #2563eb !important;
+      background-color: #1d4ed8 !important;
+      color: #ffffff !important;
     }
     [data-bs-theme="dark"] .bg-primary-custom {
-      background-color: #3b82f6 !important;
+      background-color: #1e40af !important;
+      color: #ffffff !important;
+    }
+    [data-bs-theme="dark"] .btn-outline-secondary {
+      color: #e2e8f0 !important;
+      border-color: #64748b !important;
+    }
+    [data-bs-theme="dark"] .btn-outline-secondary:hover {
+      background-color: #334155 !important;
+      color: #ffffff !important;
+    }
+    [data-bs-theme="dark"] .btn-outline-primary {
+      color: #93c5fd !important;
+      border-color: #60a5fa !important;
+    }
+    [data-bs-theme="dark"] .btn-outline-primary:hover {
+      background-color: #1d4ed8 !important;
+      color: #ffffff !important;
+    }
+    [data-bs-theme="dark"] .bg-secondary-subtle {
+      background-color: rgba(71, 85, 105, 0.4) !important;
+      color: #cbd5e1 !important;
+    }
+    [data-bs-theme="dark"] .bg-primary-subtle {
+      background-color: rgba(30, 58, 138, 0.6) !important;
+      color: #bfdbfe !important;
+    }
+    [data-bs-theme="dark"] .text-body-secondary {
+      color: #cbd5e1 !important;
+    }
+    [data-bs-theme="dark"] blockquote {
+      border-left-color: #60a5fa;
+    }
+    [data-bs-theme="dark"] .alert-info {
+      background-color: rgba(12, 74, 110, 0.3) !important;
+      color: #bae6fd !important;
+      border-color: #0284c7 !important;
     }
     .article-cover {
       width: 100%;
@@ -121,13 +158,13 @@
 
         <div class="d-flex align-items-center gap-3">
           <!-- Theme Toggle Button -->
-          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Ubah Mode Layar">
+          <button type="button" class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Ubah Mode Layar" aria-label="Ubah mode tema layar">
             <span id="themeIcon">🌙</span>
           </button>
 
           <!-- Dropdown Latihan Switcher -->
           <div class="dropdown">
-            <button class="btn btn-outline-secondary btn-sm dropdown-toggle rounded-pill px-3" type="button" id="dropdownLatihanBtn" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-outline-secondary btn-sm dropdown-toggle rounded-pill px-3" type="button" id="dropdownLatihanBtn" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Menu navigasi praktikum 2">
               Praktikum 2 ▾
             </button>
             <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="dropdownLatihanBtn">
@@ -146,75 +183,77 @@
     </div>
   </nav>
 
-  <!-- BREADCRUMB & HEADER -->
-  <div class="bg-body-tertiary border-bottom py-3 mb-4">
-    <div class="container">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mb-0">
-          <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none"><i class="bi bi-house"></i> Beranda</a></li>
-          <li class="breadcrumb-item"><a href="blog.html" class="text-decoration-none">Blog AI</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Detail Artikel</li>
-        </ol>
-      </nav>
+  <!-- MAIN ARTICLE CONTENT -->
+  <main>
+    <!-- BREADCRUMB & HEADER -->
+    <div class="bg-body-tertiary border-bottom py-3 mb-4">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none"><i class="bi bi-house"></i> Beranda</a></li>
+            <li class="breadcrumb-item"><a href="blog.html" class="text-decoration-none">Blog AI</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Detail Artikel</li>
+          </ol>
+        </nav>
+      </div>
     </div>
-  </div>
 
-  <!-- ARTICLE CONTAINER -->
-  <main class="container pb-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-9">
+    <!-- ARTICLE CONTAINER -->
+    <div class="container pb-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
 
-        <!-- ARTICLE HEADER -->
-        <article class="bg-body p-4 p-md-5 rounded-4 shadow-sm mb-5 border">
-          <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
-            <span class="badge bg-primary-custom px-3 py-2 rounded-pill"><i class="bi bi-robot me-1"></i> Agentic AI Workflows</span>
-            <span class="badge bg-secondary-subtle text-secondary px-3 py-2 rounded-pill"><i class="bi bi-building me-1"></i> Enterprise AI</span>
-          </div>
+          <!-- ARTICLE HEADER -->
+          <article class="bg-body p-4 p-md-5 rounded-4 shadow-sm mb-5 border">
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+              <span class="badge bg-primary-custom px-3 py-2 rounded-pill"><i class="bi bi-robot me-1"></i> Agentic AI Workflows</span>
+              <span class="badge bg-secondary-subtle text-secondary px-3 py-2 rounded-pill"><i class="bi bi-building me-1"></i> Enterprise AI</span>
+            </div>
 
-          <h1 class="display-5 fw-bold mb-4">Membangun Agentic AI Workflows untuk Efisiensi Bisnis Enterprise di 2026</h1>
+            <h1 class="display-5 fw-bold mb-4">Membangun Agentic AI Workflows untuk Efisiensi Bisnis Enterprise di 2026</h1>
 
-          <!-- META INFO WITH BOOTSTRAP ICONS & AUTHOR PHOTO -->
-          <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 p-3 bg-body-tertiary rounded-3 mb-4 text-body-secondary small">
-            <div class="d-flex align-items-center gap-3">
-              <div class="d-flex align-items-center gap-2">
-                <img src="assets/img/yogi.png" alt="Yogi Tri M" class="rounded-circle border" width="42" height="42" style="object-fit: cover; object-position: top center;" />
-                <div>
-                  <strong class="text-body d-block">Yogi Tri M</strong>
-                  <span class="text-body-secondary" style="font-size: 0.8rem;">Lead AI Engineer AIsoISE</span>
+            <!-- META INFO WITH BOOTSTRAP ICONS & AUTHOR PHOTO -->
+            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 p-3 bg-body-tertiary rounded-3 mb-4 text-body-secondary small">
+              <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="assets/img/yogi.png" alt="Yogi Tri M" class="rounded-circle border" width="42" height="42" style="object-fit: cover; object-position: top center;" />
+                  <div>
+                    <strong class="text-body d-block">Yogi Tri M</strong>
+                    <span class="text-body-secondary" style="font-size: 0.8rem;">Lead AI Engineer AIsoISE</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="d-flex align-items-center gap-3">
-              <span><i class="bi bi-calendar3 me-1 text-primary-custom"></i> 21 September 2026</span>
-              <span><i class="bi bi-clock me-1 text-primary-custom"></i> 6 Menit Membaca</span>
-              <span><i class="bi bi-eye me-1 text-primary-custom"></i> 1,420 Views</span>
-            </div>
-          </div>
-
-          <!-- LOCAL RELIABLE COVER IMAGE -->
-          <img src="assets/img/blog_agentic_ai.jpg" class="article-cover mb-4 border" alt="Agentic AI Workflows Cover Image" />
-
-          <!-- ARTICLE PARAGRAPHS -->
-          <div class="article-body">
-            <p class="lead">
-              Dunia kecerdasan buatan telah berkembang pesat dari era kueri berbasis teks pasif menjadi era <strong>Agentic AI Workflows</strong>. Berbeda dari sistem AI konvensional yang hanya menjawab pertanyaan, AI Agent memiliki kemampuan berfikir (reasoning), perencanaan bertahap, dan eksekusi tindakan secara mandiri antar-sistem internal enterprise.
-            </p>
-
-            <p>
-              Pada skala perusahaan besar, kompleksitas alur kerja seringkali terhambat oleh verifikasi manual, pengolahan data terdistribusi di berbagai database, serta koordinasi antar departemen. Dengan mengintegrasikan sistem agen berbasis LLM (seperti GPT-4o, Claude 3.5, atau model khusus open-weights), AI dapat membaca email masuk, memverifikasi lampiran PDF, melakukan kueri ke ERP perusahaan melalui API, serta mengirimkan laporan akhir secara otomatis.
-            </p>
-
-            <!-- BOOTSTRAP CALLOUT ALERT -->
-            <div class="alert alert-info border-start border-4 border-info d-flex align-items-start gap-3 my-4" role="alert">
-              <i class="bi bi-info-circle-fill fs-3 text-info"></i>
-              <div>
-                <h5 class="alert-heading fw-bold mb-1">Catatan Penting Integrasi Enterprise</h5>
-                Keberhasilan penerapan Agentic AI memerlukan arsitektur <code>Guardrails</code> dan protokol keamanan autentikasi (OAuth2 / RBAC) agar eksekusi perintah AI tetap berada dalam batasan otoritas yang diperbolehkan.
+              <div class="d-flex align-items-center gap-3">
+                <span><i class="bi bi-calendar3 me-1 text-primary-custom"></i> 21 September 2026</span>
+                <span><i class="bi bi-clock me-1 text-primary-custom"></i> 6 Menit Membaca</span>
+                <span><i class="bi bi-eye me-1 text-primary-custom"></i> 1,420 Views</span>
               </div>
             </div>
 
-            <h3 class="h4 fw-bold mt-4 mb-3">Tiga Pilar Utama Arsitektur Agentic AI</h3>
+            <!-- LOCAL RELIABLE COVER IMAGE -->
+            <img src="assets/img/blog_agentic_ai.jpg" class="article-cover mb-4 border" alt="Agentic AI Workflows Cover Image" />
+
+            <!-- ARTICLE PARAGRAPHS -->
+            <div class="article-body">
+              <p class="lead">
+                Dunia kecerdasan buatan telah berkembang pesat dari era kueri berbasis teks pasif menjadi era <strong>Agentic AI Workflows</strong>. Berbeda dari sistem AI konvensional yang hanya menjawab pertanyaan, AI Agent memiliki kemampuan berfikir (reasoning), perencanaan bertahap, dan eksekusi tindakan secara mandiri antar-sistem internal enterprise.
+              </p>
+
+              <p>
+                Pada skala perusahaan besar, kompleksitas alur kerja seringkali terhambat oleh verifikasi manual, pengolahan data terdistribusi di berbagai database, serta koordinasi antar departemen. Dengan mengintegrasikan sistem agen berbasis LLM (seperti GPT-4o, Claude 3.5, atau model khusus open-weights), AI dapat membaca email masuk, memverifikasi lampiran PDF, melakukan kueri ke ERP perusahaan melalui API, serta mengirimkan laporan akhir secara otomatis.
+              </p>
+
+              <!-- BOOTSTRAP CALLOUT ALERT -->
+              <div class="alert alert-info border-start border-4 border-info d-flex align-items-start gap-3 my-4" role="alert">
+                <i class="bi bi-info-circle-fill fs-3 text-info" aria-hidden="true"></i>
+                <div>
+                  <div class="alert-heading h5 fw-bold mb-1">Catatan Penting Integrasi Enterprise</div>
+                  Keberhasilan penerapan Agentic AI memerlukan arsitektur <code>Guardrails</code> dan protokol keamanan autentikasi (OAuth2 / RBAC) agar eksekusi perintah AI tetap berada dalam batasan otoritas yang diperbolehkan.
+                </div>
+              </div>
+
+            <h2 class="h4 fw-bold mt-4 mb-3">Tiga Pilar Utama Arsitektur Agentic AI</h2>
             <p>
               Untuk membangun alur kerja agen yang andal di industri enterprise, terdapat tiga pilar arsitektur inti yang wajib diimplementasikan:
             </p>
@@ -227,7 +266,7 @@
 
             <!-- BLOCKQUOTE -->
             <blockquote>
-              <i class="bi bi-quote fs-2 text-primary-custom d-block mb-2"></i>
+              <i class="bi bi-quote fs-2 text-primary-custom d-block mb-2" aria-hidden="true"></i>
               "Agentic AI bukan sekadar alat bantu obrolan, melainkan tenaga kerja digital mandiri yang mampu melipatgandakan produktivitas bisnis hingga 10 kali lipat."
               <cite class="d-block mt-2 fs-6 text-body-secondary font-normal">— Research Report AIsoISE Studio 2026</cite>
             </blockquote>
@@ -238,7 +277,7 @@
 
             <!-- TIPS / KEY POINTS CARD -->
             <div class="card bg-body-tertiary border-0 p-4 rounded-4 my-4">
-              <h5 class="fw-bold mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Check-List Implementasi Agentic AI:</h5>
+              <h3 class="h5 fw-bold mb-3"><i class="bi bi-check-circle-fill text-success me-2" aria-hidden="true"></i> Check-List Implementasi Agentic AI:</h3>
               <ul class="mb-0 text-body-secondary">
                 <li class="mb-2">Pastikan API internal memiliki skema Swagger/OpenAPI yang jelas.</li>
                 <li class="mb-2">Terapkan Human-in-the-Loop (HITL) untuk transaksi finansial bernilai tinggi.</li>
@@ -250,7 +289,7 @@
           <!-- SHARE & TAGS -->
           <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 pt-4 border-top mt-5">
             <div class="d-flex align-items-center gap-2">
-              <span class="fw-bold me-2"><i class="bi bi-tags me-1"></i> Tag:</span>
+              <span class="fw-bold me-2"><i class="bi bi-tags me-1" aria-hidden="true"></i> Tag:</span>
               <span class="badge bg-secondary-subtle text-secondary">Agentic AI</span>
               <span class="badge bg-secondary-subtle text-secondary">LLM</span>
               <span class="badge bg-secondary-subtle text-secondary">Automation</span>
@@ -258,23 +297,23 @@
 
             <div class="d-flex align-items-center gap-2">
               <span class="fw-bold me-2">Bagikan:</span>
-              <button class="btn btn-outline-primary btn-sm rounded-circle"><i class="bi bi-linkedin"></i></button>
-              <button class="btn btn-outline-primary btn-sm rounded-circle"><i class="bi bi-twitter-x"></i></button>
-              <button class="btn btn-outline-primary btn-sm rounded-circle"><i class="bi bi-whatsapp"></i></button>
+              <button class="btn btn-outline-primary btn-sm rounded-circle" aria-label="Bagikan artikel ke LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></button>
+              <button class="btn btn-outline-primary btn-sm rounded-circle" aria-label="Bagikan artikel ke Twitter / X"><i class="bi bi-twitter-x" aria-hidden="true"></i></button>
+              <button class="btn btn-outline-primary btn-sm rounded-circle" aria-label="Bagikan artikel ke WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></button>
             </div>
           </div>
         </article>
 
         <!-- COMMENT SECTION -->
         <section class="bg-body p-4 p-md-5 rounded-4 shadow-sm mb-5 border">
-          <h3 class="h4 fw-bold mb-4"><i class="bi bi-chat-left-text me-2 text-primary-custom"></i> Diskusi & Komentar (2)</h3>
+          <h2 class="h4 fw-bold mb-4"><i class="bi bi-chat-left-text me-2 text-primary-custom" aria-hidden="true"></i> Diskusi & Komentar (2)</h2>
 
           <!-- Existing Comments -->
           <div class="d-flex gap-3 mb-4 pb-3 border-bottom">
             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" class="rounded-circle" width="48" height="48" alt="Budi Santoso" />
             <div>
               <div class="d-flex align-items-center gap-2">
-                <h6 class="fw-bold mb-0">Budi Santoso</h6>
+                <p class="fw-bold mb-0 text-body">Budi Santoso</p>
                 <span class="text-body-secondary small">&bull; 2 jam lalu</span>
               </div>
               <p class="small text-body-secondary mt-1 mb-0">Artikel yang sangat membuka wawasan! Apakah RAG architecture bisa diterapkan untuk database SQL legacy di perbankan?</p>
@@ -285,7 +324,7 @@
             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" class="rounded-circle" width="48" height="48" alt="Siti Rahma" />
             <div>
               <div class="d-flex align-items-center gap-2">
-                <h6 class="fw-bold mb-0">Siti Rahma</h6>
+                <p class="fw-bold mb-0 text-body">Siti Rahma</p>
                 <span class="text-body-secondary small">&bull; 5 jam lalu</span>
               </div>
               <p class="small text-body-secondary mt-1 mb-0">Sangat menarik mengenai pembagian pilar agen AI. Ditunggu implementasi kodenya dalam Python!</p>
@@ -293,20 +332,20 @@
           </div>
 
           <!-- Add Comment Form -->
-          <h5 class="fw-bold mb-3 mt-4">Tulis Komentar Anda</h5>
+          <h3 class="h5 fw-bold mb-3 mt-4">Tulis Komentar Anda</h3>
           <form onsubmit="event.preventDefault(); alert('Komentar Anda telah dikirim dan menunggu moderasi.');">
             <div class="row g-3 mb-3">
               <div class="col-md-6">
-                <input type="text" class="form-control rounded-3" placeholder="Nama Lengkap *" required />
+                <input type="text" class="form-control rounded-3" placeholder="Nama Lengkap *" required aria-label="Nama Lengkap" />
               </div>
               <div class="col-md-6">
-                <input type="email" class="form-control rounded-3" placeholder="Email (tidak akan dipublikasikan) *" required />
+                <input type="email" class="form-control rounded-3" placeholder="Email (tidak akan dipublikasikan) *" required aria-label="Alamat Email" />
               </div>
             </div>
             <div class="mb-3">
-              <textarea class="form-control rounded-3" rows="3" placeholder="Tulis tanggapan atau pertanyaan Anda mengenai artikel ini..." required></textarea>
+              <textarea class="form-control rounded-3" rows="3" placeholder="Tulis tanggapan atau pertanyaan Anda mengenai artikel ini..." required aria-label="Isi komentar artikel"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary-custom text-white rounded-pill px-4">Kirim Komentar <i class="bi bi-send ms-1"></i></button>
+            <button type="submit" class="btn btn-primary-custom text-white rounded-pill px-4" aria-label="Kirim komentar artikel">Kirim Komentar <i class="bi bi-send ms-1" aria-hidden="true"></i></button>
           </form>
         </section>
 
@@ -319,27 +358,27 @@
     <div class="container">
       <div class="row g-4 pb-4 border-bottom border-secondary border-opacity-25">
         <div class="col-lg-5">
-          <h5 class="fw-bold text-white mb-3">AIso<span class="text-primary-custom">ISE Studio</span></h5>
+          <h2 class="h5 fw-bold text-white mb-3">AIso<span class="text-primary-custom">ISE Studio</span></h2>
           <p class="text-secondary max-w-sm" style="max-width: 380px;">
             Pusat edukasi dan penyedia solusi Artificial Intelligence terkemuka. Terdepan dalam riset, inovasi, dan otomasi enterprise.
           </p>
         </div>
 
         <div class="col-6 col-lg-3">
-          <h6 class="fw-bold text-white mb-3">Proyek PABWE</h6>
+          <h3 class="h6 fw-bold text-white mb-3">Proyek PABWE</h3>
           <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
-            <li><a href="index.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1"></i> Landing Page (CSS)</a></li>
-            <li><a href="blog.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1"></i> Daftar Blog (Bootstrap 5)</a></li>
-            <li><a href="blog-detail.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1"></i> Detail Blog (Bootstrap 5)</a></li>
-            <li><a href="cv.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1"></i> Curriculum Vitae (Tailwind 4)</a></li>
+            <li><a href="index.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1" aria-hidden="true"></i> Landing Page (CSS)</a></li>
+            <li><a href="blog.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1" aria-hidden="true"></i> Daftar Blog (Bootstrap 5)</a></li>
+            <li><a href="blog-detail.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1" aria-hidden="true"></i> Detail Blog (Bootstrap 5)</a></li>
+            <li><a href="cv.html" class="text-secondary text-decoration-none"><i class="bi bi-chevron-right me-1" aria-hidden="true"></i> Curriculum Vitae (Tailwind 4)</a></li>
           </ul>
         </div>
 
         <div class="col-6 col-lg-4">
-          <h6 class="fw-bold text-white mb-3">Kontak Penulis</h6>
+          <h3 class="h6 fw-bold text-white mb-3">Kontak Penulis</h3>
           <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
-            <li><i class="bi bi-geo-alt me-2 text-primary-custom"></i> IT Del, Balige, Sumatera Utara</li>
-            <li><i class="bi bi-person me-2 text-primary-custom"></i> Yogi Tri M (yogitm)</li>
+            <li><i class="bi bi-geo-alt me-2 text-primary-custom" aria-hidden="true"></i> IT Del, Balige, Sumatera Utara</li>
+            <li><i class="bi bi-person me-2 text-primary-custom" aria-hidden="true"></i> Yogi Tri M (ifs24023)</li>
           </ul>
         </div>
       </div>
