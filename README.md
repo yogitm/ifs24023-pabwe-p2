@@ -6,6 +6,8 @@ Repositori ini berisi solusi lengkap untuk **Praktikum 2 PABWE** (Pengembangan A
 - **Username**: `yogitm`
 - **Program Studi**: Teknologi Informasi
 - **Tema Proyek**: Perusahaan Jasa Artificial Intelligence (**AIsoISE Studio**)
+- **Live Demo**: [https://ifs24023-p2.yogitrim.my.id](https://ifs24023-p2.yogitrim.my.id)
+- **Auto-Deploy**: ✅ Active (Auto-synced with `dell-server`)
 
 ---
 
