@@ -29,11 +29,3 @@ yogitm-pabwe-p2/
 ```
 
 ---
-
-## 🚀 Fitur & Inovasi Terbaru
-
-1. **Brand AIsoISE**: Nama brand dan logo resmi telah diperbarui menjadi **AIsoISE** di seluruh halaman.
-2. **Modul Modal Detail Layanan**: Pada section *Layanan Unggulan* di `index.html`, mengklik tombol **"Pelajari Selengkapnya"** membuka dialog modal interaktif yang menjelaskan rincian fitur, arsitektur RAG/CV/Agentic, dan tombol konsultasi.
-3. **Perbaikan Navbar & Dropdown**: Menu switcher `Praktikum 2` berfungsi 100% pada klik maupun hover di seluruh halaman (`index.html`, `blog.html`, `blog-detail.html`, `cv.html`, `bootstrap5.html`, `tailwind4.html`).
-4. **Light Mode & Dark Mode Switcher (Bug-Free)**: Fitur pengubah tema layar (🌙 / ☀️) yang terintegrasi menggunakan `localStorage` sehingga preferensi mode tersimpan saat berpindah halaman. Kontras warna teks, background, border, dan kartu disesuaikan secara otomatis di setiap mode.
-5. **Foto Asli Yogi Tri M**: Halaman CV (`cv.html`) dan metadata artikel blog (`blog.html` & `blog-detail.html`) menggunakan foto asli `assets/img/yogi.png` dan nama **Yogi Tri M**.
