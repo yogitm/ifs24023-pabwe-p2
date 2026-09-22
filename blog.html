@@ -102,6 +102,25 @@
     [data-bs-theme="dark"] .text-body-secondary {
       color: #cbd5e1 !important;
     }
+    /* WCAG AA Color Contrast Overrides for Dark Footer */
+    footer.bg-dark,
+    footer.bg-dark .text-secondary,
+    footer.bg-dark a.text-secondary,
+    footer.bg-dark ul.text-secondary,
+    footer.bg-dark li,
+    footer.bg-dark div.text-secondary,
+    footer.bg-dark div.text-secondary > div,
+    footer.bg-dark p.text-secondary {
+      color: #cbd5e1 !important;
+    }
+    footer.bg-dark a.text-secondary:hover,
+    footer.bg-dark a.text-secondary:focus {
+      color: #ffffff !important;
+      text-decoration: underline !important;
+    }
+    footer.bg-dark .text-primary-custom {
+      color: #93c5fd !important;
+    }
     .card-blog {
       transition: transform 0.25s ease, box-shadow 0.25s ease;
       border-radius: 16px;
@@ -401,7 +420,7 @@
   </main>
 
   <!-- BOOTSTRAP FOOTER -->
-  <footer class="bg-dark text-white pt-5 pb-4 mt-5 border-top border-primary border-4">
+  <footer class="bg-dark text-white pt-5 pb-4 mt-5 border-top border-primary border-4" data-bs-theme="dark">
     <div class="container">
       <div class="row g-4 pb-4 border-bottom border-secondary border-opacity-25">
         <div class="col-lg-5">
